@@ -4,7 +4,6 @@ namespace LaravelStubs;
 
 use LaravelStubs\Console\MigrateMakeCommand;
 use LaravelStubs\Console\ModelMakeCommand;
-use Illuminate\Foundation\Console\UpCommand;
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 
 class ServiceProvider extends BaseServiceProvider
@@ -38,13 +37,6 @@ class ServiceProvider extends BaseServiceProvider
 
         $this->app->extend('command.model.make', function () {
             return $this->app->make(ModelMakeCommand::class);
-        });
-    }
-
-    private function controller($config)
-    {
-        $this->app->extend('command.controller.make', function () {
-            return $this->app->make(UpCommand::class);
         });
     }
 
