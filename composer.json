@@ -1,0 +1,31 @@
+{
+    "name": "danielcamargo/laravel-stubs",
+    "description": "Easy way to override laravel default (php artisan make) stubs",
+    "license": "GNU General Public License v3.0",
+    "authors": [
+        {
+            "name": "Daniel Teleginski Camargo",
+            "email": "daniel.camargo.eti@gmail.com"
+        }
+    ],
+    "config": {
+        "preferred-install": "dist"
+    },
+    "require": {
+        "php": "^7.0",
+        "laravel/framework": "5.6.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "LaravelStubs\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LaravelStubs\\ServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable"
+}
