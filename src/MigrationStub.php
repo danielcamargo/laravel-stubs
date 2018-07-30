@@ -1,10 +1,10 @@
 <?php
 
-namespace LaravelStubs\Console;
+namespace LaravelStubs;
 
-use \Illuminate\Database\Migrations\MigrationCreator as BaseMigrationCreator;
+use Illuminate\Database\Migrations\MigrationCreator as BaseMigrationCreator;
 
-class MigrationCreator extends BaseMigrationCreator
+class MigrationStub extends BaseMigrationCreator
 {
 
     protected function getStub($table, $create)

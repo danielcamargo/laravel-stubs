@@ -2,15 +2,12 @@
 
 namespace LaravelStubs;
 
-use LaravelStubs\Console\MigrateMakeCommand;
-use LaravelStubs\Console\ModelMakeCommand;
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 
 class ServiceProvider extends BaseServiceProvider
 {
     public function register()
     {
-
     }
 
     public function boot()
@@ -36,7 +33,7 @@ class ServiceProvider extends BaseServiceProvider
         }
 
         $this->app->extend('command.model.make', function () {
-            return $this->app->make(ModelMakeCommand::class);
+            return $this->app->make(ModelStub::class);
         });
     }
 
@@ -46,8 +43,8 @@ class ServiceProvider extends BaseServiceProvider
             return;
         }
 
-        $this->app->extend('command.migrate.make', function () {
-            return $this->app->make(MigrateMakeCommand::class);
+        $this->app->extend('migration.creator', function () {
+            return $this->app->make(MigrationStub::class);
         });
     }
 }

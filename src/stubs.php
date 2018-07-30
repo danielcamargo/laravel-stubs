@@ -5,7 +5,6 @@ return [
     'model' => [
         'default' => base_path('stubs/model/default.stub'),
         'pivot' => base_path('stubs/model/pivot.stub'),
-        'app_folder' => 'Models',
     ],
 
     'migration' => [
